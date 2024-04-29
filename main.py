@@ -1,2 +1,7 @@
 from pyscript import document
-print("hello world !!")
+import sys
+from pyscript import display
+
+
+display(sys.version)
+display("hello")
