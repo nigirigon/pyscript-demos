@@ -8,8 +8,7 @@
 
         <!-- PyScript CSS -->
         <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-        <!-- CSS for examples -->
-        <link rel="stylesheet" href="./assets/css/examples.css" />
+
 
         <!-- This script tag bootstraps PyScript -->
         <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
@@ -24,8 +23,7 @@
             loading.showModal();
         </script>
 
-        <title>Folium</title>
-        <link rel="icon" type="image/png" href="./assets/favicon.png" />
+        <title>Accueil</title>
     </head>
 
     <body>
@@ -33,20 +31,13 @@
             <h1>Loading...</h1>
         </dialog>
 
-        <nav class="navbar" style="background-color: #000000">
-            <div class="app-header">
-                <a href="/">
-                    <img src="./assets/logo.png" class="logo" />
-                </a>
-                <a class="title" href="" style="color: #f0ab3c">Folium</a>
-            </div>
-        </nav>
+        <a href="./folium/index.html" target="_blank">Folium</a>
+        <a href="./folium/index.html" target="_blank">Learning</a>
 
         <section class="pyscript">
-            <div id="folium"></div>
+            <div id="main_pyscript"></div>
             <script type="py" src="./main.py" config="./pyscript.toml"></script>
         </section>
-
     </body>
 
 </html>
