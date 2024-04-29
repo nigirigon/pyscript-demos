@@ -1,4 +1,7 @@
 import sys
 from pyscript import display
-display(sys.version)
-print("hello")
+from pyscript.js_modules import leaflet as L
+
+map = L.map("map")
+
+map
