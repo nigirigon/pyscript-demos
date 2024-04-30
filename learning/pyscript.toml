@@ -1,3 +1,3 @@
 name = "Home page"
 description = "This is the welcome page"
-packages = ["ssl","htmltools","shiny"]
+packages = ["click","ssl","htmltools","shiny"]
