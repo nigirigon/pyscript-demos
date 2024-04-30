@@ -3,10 +3,27 @@ m="Ready to play !"
 display(m, target="main_pyscript")
 
 
-from shiny.express import input, render, ui
+from shiny import App, Inputs, Outputs, Session, render, ui
 
-ui.input_slider("val", "Slider label", min=0, max=100, value=50)
+app_ui = ui.page_fluid(
+    ui.input_select(
+        "state",
+        "Choose a state:",
+        {
+            "East Coast": {"NY": "New York", "NJ": "New Jersey", "CT": "Connecticut"},
+            "West Coast": {"WA": "Washington", "OR": "Oregon", "CA": "California"},
+            "Midwest": {"MN": "Minnesota", "WI": "Wisconsin", "IA": "Iowa"},
+        },
+    ),
+    ui.output_text("value"),
+)
 
-@render.text
-def slider_val():
-    return f"Slider value: {input.val()}"
+
+def server(input: Inputs, output: Outputs, session: Session):
+    @render.text
+    def value():
+        return "You choose: " + str(input.state())
+
+
+app = App(app_ui, server)
+display(app)
