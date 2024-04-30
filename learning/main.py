@@ -3,4 +3,6 @@ m="Ready to play !"
 display(m, target="main_pyscript")
 
 import modin.pandas as pd
-import pandas
+import pandas as pds
+
+display("test")
